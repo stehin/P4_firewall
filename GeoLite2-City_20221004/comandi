@@ -1,0 +1,16 @@
+#!/bin/env python3
+from geoip2 import *
+import geoip2.database
+reader=geoip2.database.Reader("/home/p4/Desktop/Originale/GeoLite2-City_20221004/GeoLite2-City.mmdb")
+response1=reader.city("8.27.67.188") #Shangai 1796236 host 1
+response2=reader.city("31.28.27.50") #San pietrogurgo 498817 host 2
+response3=reader.city("89.46.106.33") #Arezzo 3182884 host 3
+response4=reader.city("95.110.235.107") #comune sulmona 3182884 host 4
+print(response1.city.name)
+print(response1.country.name)
+print(response1.city.geoname_id)
+print(response2.city.geoname_id)
+print(response3.city.geoname_id)
+print(response4.city.geoname_id)
+#print(response.country.geoname_id)
+reader.close()
