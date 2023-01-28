@@ -109,7 +109,7 @@ def readTableRules(p4info_helper, sw):
 def check_spoofing(ipv4_address, geoname_id):
     result=False
     try:
-        reader=geoip2.database.Reader("/home/p4/Desktop/Originale/GeoLite2-City_20221004/GeoLite2-City.mmdb")
+        reader=geoip2.database.Reader("/home/p4/Desktop/P4_firewall/GeoLite2-City_20221004/GeoLite2-City.mmdb")
         response=reader.city(ipv4_address)
         real_geoname_id=response.city.geoname_id
         #print(response.city.name)
