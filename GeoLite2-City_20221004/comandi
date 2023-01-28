@@ -1,7 +1,7 @@
 #!/bin/env python3
 from geoip2 import *
 import geoip2.database
-reader=geoip2.database.Reader("/home/p4/Desktop/Originale/GeoLite2-City_20221004/GeoLite2-City.mmdb")
+reader=geoip2.database.Reader("/home/p4/Desktop/P4_firewall/GeoLite2-City_20221004/GeoLite2-City.mmdb")
 response1=reader.city("8.27.67.188") #Shangai 1796236 host 1
 response2=reader.city("31.28.27.50") #San pietrogurgo 498817 host 2
 response3=reader.city("89.46.106.33") #Arezzo 3182884 host 3
