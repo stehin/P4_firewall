@@ -1,0 +1,22 @@
+{
+    "hosts": {
+        "h1": {"ip": "8.27.67.188/24", "mac": "08:00:00:00:01:11","commands":["route add default gw 8.27.67.1 dev eth0",
+                    "arp -i eth0 -s 8.27.67.1 08:00:00:00:00:01"]},
+        "h2": {"ip": "31.28.27.50/24", "mac": "08:00:00:00:01:22","commands":["route add default gw 31.28.27.1 dev eth0",
+                    "arp -i eth0 -s 31.28.27.1 08:00:00:00:00:02"]},
+        "h3": {"ip": "89.46.106.33/24", "mac": "08:00:00:00:01:33","commands":["route add default gw 89.46.106.1 dev eth0",
+                    "arp -i eth0 -s 89.46.106.1 08:00:00:00:00:03"]},
+        "h4": {"ip": "95.110.235.107/24", "mac": "08:00:00:00:01:44","commands":["route add default gw 95.110.235.1 dev eth0",
+                    "arp -i eth0 -s 95.110.235.1 08:00:00:00:00:04"]}
+    },
+    "switches": {
+        "s1": { "name" : "s1", "grpc_port": "50051", "device_id": "1", "thrift_port": "9090"},
+        "s2": { "name" : "s2", "grpc_port": "50052", "device_id": "2", "thrift_port": "9091"},
+        "s3": { "name" : "s3", "grpc_port": "50053", "device_id": "3", "thrift_port": "9092"},
+        "s4": { "name" : "s4", "grpc_port": "50054", "device_id": "4", "thrift_port": "9093"}
+    },
+    "links": [
+      ["h1", "s1", 1], ["h2", "s2", 1], ["h3", "s3", 1], ["h4", "s4", 1],
+       ["s1", "s2", 10, 10],["s2", "s3", 11, 11],["s3", "s4", 10, 10],["s4", "s1", 11, 11]
+    ]
+}

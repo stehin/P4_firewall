@@ -1,0 +1,54 @@
+{
+"table_entries": [
+  {
+    "table_name_name": "MyIngress.ipv4_lpm_for_ssh",
+    "default_action": true,
+    "action_name": "MyIngress.drop",
+    "action_params": { }
+  },
+  {
+    "table_name": "MyIngress.ipv4_lpm_for_ssh",
+    "match_fields": {
+      "hdr.ipv4.dstAddr": ["8.27.67.188", 32]
+    },
+    "action_name": "MyIngress.ipv4_forward",
+    "action_params": {
+      "dstAddr": "08:00:00:00:00:01",
+      "port": 11
+    }
+  },
+  {
+    "table_name": "MyIngress.ipv4_lpm_for_ssh",
+    "match_fields": {
+      "hdr.ipv4.dstAddr": ["31.28.27.50", 32]
+    },
+    "action_name": "MyIngress.ipv4_forward",
+    "action_params": {
+      "dstAddr": "08:00:00:00:00:03",
+      "port": 10
+    }
+  },
+  {
+    "table_name": "MyIngress.ipv4_lpm_for_ssh",
+    "match_fields": {
+      "hdr.ipv4.dstAddr": ["89.46.106.33", 32]
+    },
+    "action_name": "MyIngress.ipv4_forward",
+    "action_params": {
+      "dstAddr": "08:00:00:00:00:03",
+      "port": 10
+    }
+  },
+  {
+    "table_name": "MyIngress.ipv4_lpm_for_ssh",
+    "match_fields": {
+      "hdr.ipv4.dstAddr": ["95.110.235.107", 32]
+    },
+    "action_name": "MyIngress.ipv4_forward",
+    "action_params": {
+      "dstAddr": "08:00:00:00:01:44",
+      "port": 1
+    }
+  }
+]
+}
