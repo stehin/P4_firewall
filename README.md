@@ -18,12 +18,12 @@ In order to redo the exercise, these simple steps need to be followed:
 + Enter in the p4 account and use the "git clone" command to clone the online repository available at the following [link](https://pypi.org/project/geoip2/), after entering the "Dekstop" folder.
 + Install geoip2 Python package ([see here](https://pypi.org/project/geoip2/))
 + Give the command "sudo python3 run_mininet.py --p4-file switch_config.p4" after entering the "P4_Project" folder contained in the previously cloned repository. This command will:
-        -  compile switch_config.p4
-        -  start the topology in Mininet
-        -  configure all switches with the P4 program
-        -  configure all hosts with the commands listed in the file topology.json
+        +  compile switch_config.p4
+        +  start the topology in Mininet
+        +  configure all switches with the P4 program
+        +  configure all hosts with the commands listed in the file topology.json
 + item Give the command "sudo python3 controller.py" after entering the "P4_Project" folder contained in the previously cloned repository from another terminal. This command will start the network controller. The controller will:
-        -  configure all switches with the appropriate table entries
-        - perform DoS or DDoS detection (by simply reading a counter periodically)
-        - perform spoofing check (on the geoname_id GSS field) when requested from the user
+        +  configure all switches with the appropriate table entries
+        + perform DoS or DDoS detection (by simply reading a counter periodically)
+        + perform spoofing check (on the geoname_id GSS field) when requested from the user
 + Give the command pingall in the Mininet CLI to check if all the previous steps were successful
