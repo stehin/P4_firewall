@@ -27,3 +27,7 @@ In order to redo the exercise, these simple steps need to be followed:
   + perform DoS or DDoS detection (by simply reading a counter periodically)
   + perform spoofing check (on the geoname_id GSS field) when requested from the user
 + Give the command pingall in the Mininet CLI to check if all the previous steps were successful
+
+**A note about the control plane**
+
+A P4 program defines a packet-processing pipeline, but the rules within each table are inserted by the control plane. When a rule matches a packet, its action is invoked with parameters supplied by the control plane as part of the rule.  We use P4Runtime to install the control plane rules.
