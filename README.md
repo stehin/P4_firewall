@@ -22,7 +22,7 @@ In order to redo the exercise, these simple steps need to be followed:
         2. start the topology in Mininet
         3. configure all switches with the P4 program
         4. configure all hosts with the commands listed in the file topology.json
-+ item Give the command "sudo python3 controller.py" after entering the "P4_Project" folder contained in the previously cloned repository from another terminal. This command will start the network controller. The controller will:
++ Give the command "sudo python3 controller.py" after entering the "P4_Project" folder contained in the previously cloned repository from another terminal. This command will start the network controller. The controller will:
         1. configure all switches with the appropriate table entries
         2. perform DoS or DDoS detection (by simply reading a counter periodically)
         3. perform spoofing check (on the geoname_id GSS field) when requested from the user
