@@ -15,7 +15,7 @@ Our P4 program will be written for the V1Model architecture implemented on P4.or
 
 In order to redo the exercise, these simple steps need to be followed:
 + Download the VM with preinstalled tools available [here](https://github.com/p4lang/tutorials)
-+ Enter in the p4 account and use the "git clone" command to clone the online repository available at the following [link](https://pypi.org/project/geoip2/), after entering the "Dekstop" folder.
++ Enter in the p4 account and use the "git clone" command to clone this epository, after entering the "Dekstop" folder.
 + Install geoip2 Python package ([see here](https://pypi.org/project/geoip2/))
 + Give the command "sudo python3 run_mininet.py --p4-file switch_config.p4" after entering the "P4_Project" folder contained in the previously cloned repository. This command will:
   + compile switch_config.p4
